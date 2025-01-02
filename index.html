@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">TENTEX</div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#Program1">Program</a>
+            <a href="#choose">Choose Us</a>
+            <a href="#price">Pricing</a>
+            <a href="#bmi">Calculate your BMI
+            </a>
+            <a href="admin.html">Admin Login</a>
+
+            
+        </nav>
+        <a href="reg.html" class="btn-register">Register Now</a>
+    </header>
+<div id="hero">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Make Your <span style="color: #ffffff;">Body Shape</span></h1>
+            <p>In here we will help you to shape and build your ideal body and live your life to the fullest.</p>
+            <button class="btn-start">Get Started</button>
+        </div>
+        <div class="hero-image">
+            <img src="im 1.jpg" alt="Fitness Woman">
+            <img src="im2.jpg" alt="Fitness Man">
+        </div>
+    </section>
+</div>
+    <!--ABOUT PAGE-->
+
+
+<div id="program1">
+    
+  <section class="program">
+      <h2>Our Program</h2>
+      <h3>Build Your <span style="color: #f4f4f4;">Best Body</span></h3>
+      <div class="program-cards">
+          <div class="program-card">
+              <img src="im3.jpg" alt="Icon">
+              <h3>Flex Muscle</h3>
+              <p>Creating tension that's temporarily making the muscle fibers smaller or contracted.</p>
+          </div>
+          <div class="program-card">
+              <img src="im4.jpg" alt="Icon">
+              <h3>Cardio Exercise</h3>
+              <p>Exercise your heart rate up and keep it up for a prolonged period of time.</p>
+          </div>
+          <div class="program-card">
+              <img src="im5.jpg" alt="Icon">
+              <h3>Basic Yoga</h3>
+              <p>Diaphragmatic breathing is the most common technique you'll find in yoga.</p>
+          </div>
+          <div class="program-card">
+              <img src="im6.jpg" alt="Icon">
+              <h3>Weight Lifting</h3>
+              <p>Attempts a maximum weight single lift of a barbell loaded with weight plates.</p>
+          </div>
+      </div>
+  </section>
+</div>
+
+  <!--CHOOSE US-->
+  <div id="choose">
+  <div class="hero">
+   <div class="hero-text">
+       <h1>Best Reason<br>WHY CHOOSE US?</h1>
+       <p>Choose your favorite class and start now. Remember the only bad workout is the one you didn't do.</p>
+       <div class="hero-stats">
+           <div>
+               <h2>200+</h2>
+               <p>Total Members</p>
+           </div>
+           <div>
+               <h2>50+</h2>
+               <p>Best Trainers</p>
+           </div>
+           <div>
+               <h2>25+</h2>
+               <p>Programs</p>
+           </div>
+           <div>
+               <h2>100+</h2>
+               <p>Awards</p>
+           </div>
+       </div>
+   </div>
+   <div class="hero-img">
+       <div class="overlay"></div>
+       <img src="im7.jpg" alt="Fitness Models" width="800" height="320">
+    </div>
+</div>
+
+</div>
+
+<!-- CARD-->
+
+<div id="price">
+<section class="pricing-section">
+   <div class="pricing-card basic">
+     <div class="icon">&#128104;</div>
+     <h3>BASIC PACKAGE</h3>
+     <p class="price">₹120</p>
+     <ul>
+       <li>✔ 5 Days In A Week</li>
+       <li>✔ 01 Sweatshirt</li>
+       <li>✔ 01 Bottle of Protein</li>
+       <li>✔ Access to Videos</li>
+       <li>✔ Muscle Stretching</li>
+     </ul>
+     <a href="reg.html" class="btn-register">Register Now</a>
+    </div>
+
+   <div class="pricing-card premium">
+     <div class="icon">&#9989;</div>
+     <h3>PREMIUM PACKAGE</h3>
+     <p class="price">₹240</p>
+     <ul>
+       <li>✔ 5 Days In A Week</li>
+       <li>✔ 01 Sweatshirt</li>
+       <li>✔ 01 Bottle of Protein</li>
+       <li>✔ Access to Videos</li>
+       <li>✔ Muscle Stretching</li>
+     </ul>
+     <a href="reg.html" class="btn-register">Register Now</a>
+    </div>
+
+   <div class="pricing-card diamond">
+     <div class="icon">&#128081;</div>
+     <h3>DIAMOND PACKAGE</h3>
+     <p class="price">₹420</p>
+     <ul>
+       <li>✔ 5 Days In A Week</li>
+       <li>✔ 01 Sweatshirt</li>
+       <li>✔ 01 Bottle of Protein</li>
+       <li>✔ Access to Videos</li>
+       <li>✔ Muscle Stretching</li>
+     </ul>
+     <a href="reg.html" class="btn-register">Register Now</a>
+    </div>
+ </section>
+</div>
+<!--4page-->
+<div id="bmi">
+<main class="container">
+    <div class="layout">
+        <div class="bmi-section">
+            <h1>CALCULATE YOUR BMI</h1>
+            <p>The body mass index (BMI) calculator calculates body mass index from your weight and height.</p>
+            <form class="bmi-form">
+                <input type="number" id="height" placeholder="Height (cm)" required>
+                <input type="number" id="weight" placeholder="Weight (kg)" required>
+                <button type="button" onclick="calculateBMI()">Calculate Now</button>
+            </form>
+            <p id="result" style="margin-top: 20px; font-size: 1.2rem;"></p>
+        </div>
+        <div class="image-section">
+            <img src="bmi.png" alt="Fit person">
+        </div>
+    </div>
+</main>
+
+</div>
+<!--Footer-->
+<footer class="footer" style="background-color: #141629; color: #fff; padding: 20px 0;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div class="footer-left" style="font-size: 14px;">
+          
+        </div>
+        
+        <div class="footer-center" style="display: flex; gap: 20px; font-size: 14px; ">
+            <a href="#hero" style="color: #de1818; text-decoration: none;">Home</a>
+            <a href="#Program1" style="color: #ff0000; text-decoration: none;">Program</a>
+            <a href="#choose" style="color: #ff0e0e; text-decoration: none;">Choose Us</a>
+            <a href="#price" style="color: #ff0000; text-decoration: none;">Pricing</a>
+            <a href="#bmi" style="color: #ff0000; text-decoration: none;">CALCULATE YOUR BMI</a>
+        </div>
+       
+        <div class="footer-right" style="display: flex; gap: 10px;">
+            <a href="#" style="color: #fff; font-size: 20px;">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" style="color: #fff; font-size: 20px;">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" style="color: #fff; font-size: 20px;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" style="color: #fff; font-size: 20px;">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" style="color: #fff; font-size: 20px;">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" style="color: #fff; font-size: 20px;">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+ <script>
+   // Add functionality for buttons if needed
+document.querySelectorAll('.purchase-btn').forEach(button => {
+   button.addEventListener('click', () => {
+     alert('Purchase feature coming soon!');
+   });
+ });
+ 
+
+
+ function calculateBMI() {
+    const height = document.getElementById('height').value;
+    const weight = document.getElementById('weight').value;
+    const result = document.getElementById('result');
+
+    if (height > 0 && weight > 0) {
+        const bmi = (weight / ((height / 100) ** 2)).toFixed(2);
+        result.textContent = `Your BMI is ${bmi}`;
+    } else {
+        result.textContent = 'Please enter valid height and weight.';
+    }
+}
+
+
+
+
+//footer
+document.querySelector('.subscribe-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const emailInput = document.querySelector('.subscribe-input').value;
+    alert(`Subscribed successfully with email: ${emailInput}`);
+});
+ </script>
+</body>
+</html>

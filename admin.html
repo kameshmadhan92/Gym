@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #f01a1a;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #f01a1a;
+      border-radius: 5px;
+      background: #333;
+      color: #fff;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: #ff4040;
+    }
+    .btn-login {
+      width: 100%;
+      padding: 10px;
+      background: #f01a1a;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn-login:hover {
+      background: #e00000;
+    }
+    .error-message {
+      color: #ff4040;
+      font-size: 0.9em;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Admin Login</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <a href="invoice.html" class="btn-register">Login</a>
+    </form>
+    <div id="errorMessage" class="error-message" style="display: none;"></div>
+  </div>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      const response = await fetch('/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (response.status === 200) {
+        // Redirect to admin dashboard
+        window.location.href = '/admin/dashboard';
+      } else {
+        // Show error message
+        const errorMessage = await response.text();
+        document.getElementById('errorMessage').textContent = errorMessage;
+        document.getElementById('errorMessage').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
